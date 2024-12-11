@@ -135,6 +135,9 @@ importers:
       commitizen:
         specifier: ^4.3.1
         version: 4.3.1(@types/node@20.17.9)(typescript@5.7.2)
+      commitlint-config-gitmoji:
+        specifier: ^2.3.1
+        version: 2.3.1
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1047,6 +1050,10 @@ packages:
     resolution: {integrity: sha512-IP1YLmGAk0yWrImPRRc578I3dDUI5A2UBJx9FbSOjxe9sTlzFiwVJ+zeMLgAtHMtGZsC8LUnzmW1qRemkFU4ng==}
     engines: {node: '>=v18'}
 
+  '@commitlint/types@17.8.1':
+    resolution: {integrity: sha512-PXDQXkAmiMEG162Bqdh9ChML/GJZo6vU+7F03ALKDK8zYc6SuAr47LjG7hGYRqUOz+WK0dU7bQ0xzuqFMdxzeQ==}
+    engines: {node: '>=v14'}
+
   '@commitlint/types@19.5.0':
     resolution: {integrity: sha512-DSHae2obMSMkAtTBSOulg5X7/z+rGLxcXQIkg3OmWvY6wifojge5uVMydfhUvs7yQj+V7jNmRZ2Xzl8GJyqRgg==}
     engines: {node: '>=v18'}
@@ -1310,6 +1317,15 @@ packages:
   '@faker-js/faker@9.3.0':
     resolution: {integrity: sha512-r0tJ3ZOkMd9xsu3VRfqlFR6cz0V/jFYRswAIpC+m/DIfAUXq7g8N7wTAlhSANySXYGKzGryfDXwtwsY8TxEIDw==}
     engines: {node: '>=18.0.0', npm: '>=9.0.0'}
+
+  '@gitmoji/commit-types@1.1.5':
+    resolution: {integrity: sha512-8D3FZMRY+gtYpTcHG1SOGmm9CFqxNh6rI9xDoCydxHxnWgqInbdF3nk9gibW5gXA58Hf2cVcJaLEcGOKLRAtmw==}
+
+  '@gitmoji/gitmoji-regex@1.0.0':
+    resolution: {integrity: sha512-+BFXxcWCxn0UIYuG1v5n9SfaCCS8tw95j1x3QsTJRdGGiihRyVLTHiu1wrHlzH3z4nYXKjCKiZFTdWwMjRI+gQ==}
+
+  '@gitmoji/parser-opts@1.4.0':
+    resolution: {integrity: sha512-zzmx/vtpdB/ijjUm7u9OzHNCXWKpSbzVEgVzOzhilMgoTBlUDyInZFUtiCTV+Wf4oCP9nxGa/kQGQFfN+XLH1g==}
 
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
@@ -3466,6 +3482,12 @@ packages:
     engines: {node: '>= 12'}
     hasBin: true
 
+  commitlint-config-gitmoji@2.3.1:
+    resolution: {integrity: sha512-T15ssbsyNc6szHlnGWo0/xvIA1mObqM70E9TwKNVTpksxhm+OdFht8hvDdKJAVi4nlZX5tcfTeILOi7SHBGH3w==}
+
+  commitlint-plugin-gitmoji@2.2.6:
+    resolution: {integrity: sha512-oKHPHeNXby0Ix0ZbHVSK5ZyPx1V4fyBjLOy93cYwXhOEPXe36nkDc/HDPFfQpzx1vz39277TaP9LScbqTbscfQ==}
+
   common-path-prefix@3.0.0:
     resolution: {integrity: sha512-QE33hToZseCH3jS0qN96O/bSh3kaw/h+Tq7ngyY9eWDUnTlTNUyqfqvCXioLe5Na5jFsL78ra/wuBU4iuEgd4w==}
 
@@ -4841,6 +4863,9 @@ packages:
   git-repo-info@2.1.1:
     resolution: {integrity: sha512-8aCohiDo4jwjOwma4FmYFd3i97urZulL8XL24nIPxuE+GZnfsAyy/g2Shqx6OjUiFKUXZM+Yy+KHnOmmA3FVcg==}
     engines: {node: '>= 4.0'}
+
+  gitmojis@3.14.0:
+    resolution: {integrity: sha512-wPdXxKWfp2dJE6/ch8TDJjYdXvr+4uV67AEcbImj5QC4DmP6Byje1goJL8WgMPFnLY63eadK6oxtnSjdRFzS6g==}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -9779,6 +9804,10 @@ snapshots:
     dependencies:
       find-up: 7.0.0
 
+  '@commitlint/types@17.8.1':
+    dependencies:
+      chalk: 4.1.2
+
   '@commitlint/types@19.5.0':
     dependencies:
       '@types/conventional-commits-parser': 5.0.1
@@ -10054,6 +10083,17 @@ snapshots:
       levn: 0.4.1
 
   '@faker-js/faker@9.3.0': {}
+
+  '@gitmoji/commit-types@1.1.5': {}
+
+  '@gitmoji/gitmoji-regex@1.0.0':
+    dependencies:
+      emoji-regex: 10.4.0
+      gitmojis: 3.14.0
+
+  '@gitmoji/parser-opts@1.4.0':
+    dependencies:
+      '@gitmoji/gitmoji-regex': 1.0.0
 
   '@hapi/hoek@9.3.0': {}
 
@@ -12741,6 +12781,19 @@ snapshots:
       - '@types/node'
       - typescript
 
+  commitlint-config-gitmoji@2.3.1:
+    dependencies:
+      '@commitlint/types': 17.8.1
+      '@gitmoji/commit-types': 1.1.5
+      '@gitmoji/parser-opts': 1.4.0
+      commitlint-plugin-gitmoji: 2.2.6
+
+  commitlint-plugin-gitmoji@2.2.6:
+    dependencies:
+      '@commitlint/types': 17.8.1
+      '@gitmoji/gitmoji-regex': 1.0.0
+      gitmojis: 3.14.0
+
   common-path-prefix@3.0.0: {}
 
   commondir@1.0.1: {}
@@ -14511,6 +14564,8 @@ snapshots:
       split2: 4.2.0
 
   git-repo-info@2.1.1: {}
+
+  gitmojis@3.14.0: {}
 
   glob-parent@5.1.2:
     dependencies:

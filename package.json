@@ -64,6 +64,7 @@
     "autoprefixer": "^10.4.20",
     "checkly": "^4.9.1",
     "commitizen": "^4.3.1",
+    "commitlint-config-gitmoji": "^2.3.1",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.6",
     "dotenv-cli": "^7.4.2",

@@ -172,3 +172,6 @@ Licensed under the MIT License, Copyright © 2024
 Made with ♥ by [LiamPham](https://www.linkedin.com/in/trungpham98/)
 
 Looking for a custom boilerplate to kick off your project? I'd be glad to discuss how I can help you build one.
+
+### References
+[Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate)

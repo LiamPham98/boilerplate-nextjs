@@ -4,7 +4,6 @@
     "mikestead.dotenv",
     "csstools.postcss",
     "bradlc.vscode-tailwindcss",
-    "yoavbls.pretty-ts-errors",
-    "lokalise.i18n-ally"
+    "yoavbls.pretty-ts-errors"
   ]
 }

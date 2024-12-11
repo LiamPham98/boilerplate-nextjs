@@ -1,6 +1,7 @@
 import antfu from '@antfu/eslint-config';
 import nextPlugin from '@next/eslint-plugin-next';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tailwind from 'eslint-plugin-tailwindcss';
 
 export default antfu({
@@ -17,7 +18,6 @@ export default antfu({
   formatters: {
     css: true,
   },
-
   ignores: [
     'migrations/**/*',
     'next-env.d.ts',
@@ -25,6 +25,7 @@ export default antfu({
 }, ...tailwind.configs['flat/recommended'], jsxA11y.flatConfigs.recommended, {
   plugins: {
     '@next/next': nextPlugin,
+    'simple-import-sort': simpleImportSort,
   },
   rules: {
     ...nextPlugin.configs.recommended.rules,

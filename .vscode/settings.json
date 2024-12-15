@@ -17,9 +17,6 @@
   ],
   "typescript.preferences.preferTypeOnlyAutoImports": true, // Prefer type-only imports
 
-  // Vitest
-  "testing.openTesting": "neverOpen", // Don't open the testing view automatically when running tests
-
   // Disable the default formatter, use ESLint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,

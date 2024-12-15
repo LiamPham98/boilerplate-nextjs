@@ -85,30 +85,29 @@ Now you have a fully functional authentication system with Next.js, including fe
 ├── public                          # Public assets folder
 ├── src
 │   ├── app                         # Next JS App (App Router)
-│   ├── core                        # core
-│       ├── application             # application
-│           ├── usecases            # usecases
-│           ├── services            # services
-│       ├── domain                  # domain
-│           ├── models              # models
-│           ├── services            # services
-│   ├── infras                      # infras
-│       ├── repositories            # repositories
-│       ├── storage                 # storage
+│   ├── core                        # Contains core logic and Clean Architecture layers.
+│   │   ├── application             # Application-level logic and business rules.
+│   │   │   ├── repositories        # Interfaces for repositories, defining how data should be handled (e.g., CRUD operations).
+│   │   │   ├── services            # Business services that interact with repositories and execute application logic.
+│   │   │   ├── use-cases           # Specific use cases for the application, implementing business logic using services and repositories.
+│   │   ├── entities                # Domain entities and business logic.
+│   │   │   ├── models              # Domain models representing the core data structures (e.g., User, Product).
+│   │   │   ├── dto                 # Data Transfer Objects used to define the shape of data sent or received.
+│   │   ├── infrastructure          # Handles communication with external systems (e.g., APIs).
+│   │   │   ├── services            # Concrete service implementations.
+│   │   │   ├── repositories        # API and database communication implementations
 │   ├── components                  # React components ( maybe use atomic design )
 │   ├── styles                      # Styles folder
 │   ├── utils                       # Utilities folder
-├── tests
-│   ├── e2e                         # E2E tests, also includes Monitoring as Code
-│   └── integration                 # Integration tests
 ├── tailwind.config.js              # Tailwind CSS configuration
 └── tsconfig.json                   # TypeScript configuration
 ```
+![alt text](public/clean-architecture-diagram.jpg)
 
 ### Customization
 
 - `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png` and `public/favicon-32x32.png`: your website favicon
-- `next.config.mjs`: Next.js configuration
+- `next.config.ts`: Next.js configuration
 - `.env`: default environment variables
 
 You have full access to the source code for further customization. The provided code is just an example to help you start your project. The sky's the limit 🚀.

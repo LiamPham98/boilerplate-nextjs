@@ -116,7 +116,7 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/trungpham98/" target="_blank" rel="noreferrer noopener">
             <Linkedin size={20} className="cursor-pointer opacity-50 hover:opacity-100" />
           </a>
-          <a href="https://github.com/LiamPham98" target="_blank" rel="noreferrer noopener">
+          <a href="https://demo-boilerplate-nextjs.vercel.app/" target="_blank" rel="noreferrer noopener">
             <Button variant="default" size="sm">
               Demo
             </Button>

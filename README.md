@@ -2,7 +2,7 @@
 
 ### Demo
 
-**Live demo: [Next.js Boilerplate](https://demo.nextjs-boilerplate.com)**
+**Live demo: [Next.js Boilerplate](https://demo-boilerplate-nextjs.vercel.app/)**
 
 ### Features
 
